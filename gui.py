@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk 
 
 window=tk.Tk()#construct called
 displayWidth=window.winfo_screenwidth()
@@ -14,12 +14,17 @@ window.title("Tdo app")
 window.iconbitmap("icon.ico")
 window.resizable(False,False)
 
+entryField=ttk.Entry(window)
+entryField.pack()
 
-oldButton=tk.Button(window,text="old button")
-oldButton.pack()
+#oldButton=tk.Button(window,text="old button")
+#oldButton.pack()
 
 newButton=ttk.Button(window,text="latest button")
 newButton.pack()
+
+label=ttk.Label(window,text="text")
+label.pack()
 
 #run the window
 window.mainloop()

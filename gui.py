@@ -19,8 +19,14 @@ entryField.pack()
 
 #oldButton=tk.Button(window,text="old button")
 #oldButton.pack()
+def ButtonClick():
+    out=entryField.get()
+    label.configure(text=out)
+    
+   # newButton.configure(state="disable")    #disable in after click
 
-newButton=ttk.Button(window,text="latest button")
+
+newButton=ttk.Button(window,text="latest button",command=ButtonClick)
 newButton.pack()
 
 label=ttk.Label(window,text="text")

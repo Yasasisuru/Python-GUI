@@ -32,5 +32,24 @@ newButton.pack()
 label=ttk.Label(window,text="text")
 label.pack()
 
+
+def selectRadio():
+    print(radio_var.get())
+
+radio_var=tk.StringVar()
+radio1=ttk.Radiobutton(window,text="python",value="python" ,variable= radio_var , command=selectRadio)
+radio2=ttk.Radiobutton(window,text="java",value="java" ,variable= radio_var , command=selectRadio)
+radio3=ttk.Radiobutton(window,text="cpp",value="cpp" ,variable= radio_var , command=selectRadio)
+radio1.pack()
+radio2.pack()
+radio3.pack()
+
+
+
+label12=ttk.Label(window,text="text")
+label12.pack()
+print(radio_var)
+
 #run the window
 window.mainloop()
+
